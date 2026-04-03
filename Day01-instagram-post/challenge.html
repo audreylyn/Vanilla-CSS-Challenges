@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Post</title>
+
+    <style>
+        :root {
+            --clr-blue: #0000ff;
+            --clr-red: red;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-inline-size: 700px;
+            margin-inline: auto;
+            background-color: #fff;
+            border: 0.5px solid black;
+            box-shadow: 0 0 20px 10px black;
+            margin-top: 80px;
+        } 
+
+        .flex, .toolbar {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+  
+        }
+
+
+        body {
+            background-image: linear-gradient(90deg, var(--clr-blue), var(--clr-red));
+        }
+
+        .wrapper > *:not(.image-post) {
+            padding-inline: 10px;
+            padding-block: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <article class="ig-post">
+            <div class="wrapper">
+                <div class="flex">
+                    <span>Clément</span>
+                    <img src="./assets/options.svg" alt="options-icon">
+                </div>
+
+                <div class="image-post">
+                    <img src="https://i.ibb.co/0p5691d/t-l-chargement.jpg" alt="image-post">
+                </div>
+
+                <div class="toolbar">
+                    <ul class="flex">
+                        <li><a href="#"><img src="./assets/like.svg" alt="like-icon"></a></li>
+                        <li><a href="#"><img src="./assets/comment.svg" alt="comment-icon"></a></li>
+                        <li><a href="#"><img src="./assets/transfer.svg" alt="transfer-icon"></a></li>
+                    </ul>
+                    <div>
+                        <a href="#">
+                            <img src="./assets/bookmark.svg" alt="bookmark-icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="paragraph-post">
+                    <p><strong>Clément</strong>  Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services. Apple is the world's largest technology company by revenue (totaling $274.5 billion in 2020) and, since January 2021, the world's most valuable company. As of 2021, Apple is the world's fourth-largest PC vendor by unit sales, and fourth-largest smartphone manufacturer. It is one of the Big Five American information technology companies, along with Amazon, Google, Microsoft, and Facebook.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
