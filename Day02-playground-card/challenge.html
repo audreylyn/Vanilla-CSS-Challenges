@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground Title</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+        }
+
+        .card-container {
+            box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+            border-radius: 18px;
+        }
+
+        .wrapper {
+            display: flex;
+            padding: 10px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+             line-height: 1.2;
+        }
+
+        .avatars, .avatars-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info > * {
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+
+        .html-icon {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <article class="card-container">
+            <div class="wrapper">
+                <figure class="html-icon">
+                    <img src="./assets/html5.svg" width="40"   alt="html-5-icon">
+                </figure>
+
+                <div class="info">
+                    <h1 class="title">Playground Title</h1>
+                    <h2 class="subtitle">HTML/CSS . 1 min ago</h2>
+
+                    <div class="avatars">
+                        <figure class="avatars-img">
+                            <img src="./assets/male-avatar.webp" width="30" alt="male-avatar-icon">
+                            <img src="./assets/female-avatar.png" width="30" alt="female-avatar-icon">
+                        </figure>
+                        <span>Shared with Adam, Eve..+7 more</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

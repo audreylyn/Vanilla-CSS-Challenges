@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons > button > img {
+            width: 20px;
+        }
+
+        .card-container {
+            max-width: 400px;
+            padding: 35px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.459);
+            border: 1px solid #3333336e;
+            border-radius: 5px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 15px;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .remember-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sign-in {
+            padding: 1em;
+            background-color: hsla(249, 73%, 49%, 0.692);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(28, 2, 53);
+            font-weight: 700;
+        }
+
+        .fields {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        input {
+            margin-bottom: 15px;
+        }
+
+        .button-signin {
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-block: 5px;
+            border-radius: 5px;
+            border: 1px solid #3333336e;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .or, h2 {
+            text-align: center;
+            
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #3333336e;
+        }
+
+        #codedamn {
+            font-size: 2rem;
+            background-image: linear-gradient(to bottom, red, blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Login to <span id="codedamn">codedamn</span></h1>
+
+        <article class="card-container">
+            <div class="wrapper">
+                <div class="fields">
+                    <label for="email">Email Address / Username</label>
+                    <input type="text" name="email">
+                    <label for="password">Password</label>
+                    <input type="text" name="password">
+                </div>
+                <div class="remember-wrapper">
+                    <div class="checkbox">
+                        <input type="checkbox" name="rememberme">
+                        <span>Remember me</span>
+                    </div>
+                    <a href="#">Forget your password?</a>
+                </div>
+                <button class="sign-in">
+                    <img width="15" src="./assets/lock.svg" alt="lock icon">
+                    <span>Sign in</span>
+                </button>
+
+                <div class="or">or continue with</div>
+
+                <div class="buttons">
+                    <button type="button" class="button-signin">
+                        <img src="./assets/google.svg" alt="google icon">
+                    </button>
+                    <button type="button" class="button-signin">
+                        <img src="./assets/github.svg" alt="github icon">
+                    </button>
+                </div>
+
+                <h2>Dont have an account? <a href="#">Create Account</a></h2>
+
+                <p>This site is protected by reCAPTCHA and the Google Privacy
+                Policy and Terms of Service apply.</p>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
