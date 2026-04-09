@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEM + Nesting Pricing Card</title>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --accent: #6366f1;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --radius: 1.5rem;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+ .layout {
+  max-inline-size: 900px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* HEADER */
+.layout__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.layout__header-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+}
+
+.layout__header-subtitle {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* CARD */
+.pricing-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 4, 255, 0.2), transparent 60%);
+  pointer-events: none;
+}
+
+/* DETAILS */
+.pricing-card__details {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pricing-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pricing-card__description {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pricing-card__features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
+  list-style: none;
+}
+
+.pricing-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.pricing-card__features li::before {
+  content: "✔";
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* CTA */
+.pricing-card__cta {
+  background: #f9fafb;
+  border-left: 1px solid var(--border);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.pricing-card__price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.pricing-card__price span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-left: 0.25rem;
+}
+
+.pricing-card__button {
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-card__button--primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+.pricing-card__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.3);
+}
+
+.pricing-card__link {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.pricing-card__link:hover {
+  text-decoration: underline;
+}
+
+.pricing-card__note {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pricing-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card__cta {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}
+  </style>
+</head>
+<body>
+
+<main class="layout">
+  <header class="layout__header">
+    <h1 class="layout__header-title">Simple no-tricks pricing</h1>
+    <p class="layout__header-subtitle">
+      If you're not satisfied, contact us within 14 days for a full refund.
+    </p>
+  </header>
+
+  <section class="pricing-card">
+
+    <article class="pricing-card__details">
+      <h2 class="pricing-card__title">Lifetime Membership</h2>
+
+      <p class="pricing-card__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nulla similique.
+      </p>
+
+      <ul class="pricing-card__features">
+        <li>Private forum access</li>
+        <li>Member resources</li>
+        <li>Entry to annual conference</li>
+        <li>Official member t-shirt</li>
+      </ul>
+    </article>
+
+    <aside class="pricing-card__cta">
+      <p>Pay once, own it forever</p>
+
+      <div class="pricing-card__price">
+        $349 <span>USD</span>
+      </div>
+
+      <a href="#" class="pricing-card__link">Learn about our membership policy</a>
+
+      <button class="pricing-card__button pricing-card__button--primary">
+        Get Access
+      </button>
+
+      <small class="pricing-card__note">Get a free sample (20MB)</small>
+    </aside>
+
+  </section>
+</main>
+
+</body>
+</html>

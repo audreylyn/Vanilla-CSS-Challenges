@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Pricing Card</title>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --accent: #6366f1;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --radius: 1.5rem;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      color: var(--text);
+      /* min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem; */
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    main {
+      width: 100%;
+      max-inline-size: 720px;
+
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, vw, 2.7rem);
+      font-weight: 700;
+    }
+
+    header p {
+      color: var(--muted);
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .pricing-card {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      /* box-shadow: 0 20px 50px rgba(0,0,0,0.08); */
+      /* position: relative; */
+    }
+
+    .pricing-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(99,102,241,0.1), transparent 60%);
+      pointer-events: none;
+    }
+
+    .details {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .details h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .details p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem 1.5rem;
+      list-style: none;
+    }
+
+    .features li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+
+      ::before {
+        content: '✔';
+      color: #22c55e;
+      font-weight: bold;
+      }
+    }
+
+    /* .features li::before {
+      content: "✔";
+      color: #22c55e;
+      font-weight: bold;
+    } */
+
+    .cta {
+      background: #f9fafb;
+      border-left: 1px solid var(--border);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .price span {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-left: 0.25rem;
+    }
+
+    .cta small {
+      color: var(--muted);
+    }
+
+    .btn {
+      border: none;
+      padding: 0.9rem 1.2rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(99,102,241,0.3);
+    }
+
+    .cta a {
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .cta a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-card {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <header>
+    <h1>Simple no-tricks pricing</h1>
+    <p>If you're not satisfied, contact us within 14 days for a full refund.</p>
+  </header>
+
+  <section class="pricing-card" aria-labelledby="plan-title">
+
+    <article class="details">
+      <header>
+        <h2 id="plan-title">Lifetime Membership</h2>
+      </header>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nulla similique sum minima.
+      </p>
+
+      <section aria-labelledby="features-title">
+        <h3 id="features-title" style="font-size:0.85rem; letter-spacing:0.08em; color:#6366f1;">
+          WHAT'S INCLUDED
+        </h3>
+
+        <ul class="features">
+          <li>Private forum access</li>
+          <li>Member resources</li>
+          <li>Entry to annual conference</li>
+          <li>Official member t-shirt</li>
+        </ul>
+      </section>
+    </article>
+
+    <aside class="cta" aria-label="pricing and purchase">
+      <p>Pay once, own it forever</p>
+
+      <div class="price">
+        $349 <span>USD</span>
+      </div>
+
+      <a href="#">Learn about our membership policy</a>
+
+      <button class="btn">Get Access</button>
+
+      <small>Get a free sample (20MB)</small>
+    </aside>
+
+  </section>
+</main>
+
+</body>
+</html>

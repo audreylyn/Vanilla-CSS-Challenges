@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Card Challenge</title>
+    <style>
+        *, *::after, *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            margin-top: 50px;
+            background-color: #F3F4F6;
+        }
+
+        header > h1 {
+            margin-bottom: 1rem;
+            font-size: clamp(1.2rem, 2vh, 2rem);
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 0;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 400;
+                margin-bottom: 0.5rem;
+            }
+
+            article {
+                padding: 1.35rem;
+            }
+            
+
+            article:not(:last-child) {
+                border-bottom: 1px solid #c7c4c479;
+            }
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .num {
+            color: #8263E5;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .numfrom {
+            color: #646464;
+            font-weight: 700;
+            font-weight: normal;
+            font-size: 0.8rem;
+        }
+
+        .percentage {
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+
+        .positive {
+            background-color: #DCFCE7;
+        }
+
+        .negative {
+            background-color: #FEE2E2;
+        }
+    </style>
+</head>
+<body>
+    <main class="layout">
+        <header>
+            <h1>Last 30 days</h1>
+        </header>
+        <section class="card-container">
+            <article>
+                <h2>Total Subscribers</h2>
+                <div class="stats">
+                    <div class="wrapper">
+                        <span class="num">71,897</span>
+                        <span class="numfrom">from 70,946</span>
+                    </div>
+                    <span class="percentage positive"><img width ="20" src="./assets/arrow-up.svg" alt="arrow-up">12%</span>
+                </div>
+            </article>
+            <article>
+                <h2>Avg. Open Rate</h2>
+                <div class="stats">
+                    <div class="wrapper">
+                        <span class="num">58.16%</span>
+                        <span class="numfrom">from 56.14%</span>
+                    </div>
+                    <span class="percentage positive"><img width ="20" src="./assets/arrow-up.svg" alt="arrow-up">2.02%</span>
+                </div>
+            </article>
+            <article>
+                <h2>Avg. Click Rate</h2>
+                <div class="stats">
+                    <div class="wrapper">
+                        <span class="num">24.57%</span>
+                        <span class="numfrom">from 28.62%</span>
+                    </div>
+                    <span class="percentage negative"><img width ="20" src="./assets/arrow-down.svg" alt="arrow-down">4.05%</span>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
