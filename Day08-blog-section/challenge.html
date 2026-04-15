@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs Section</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4922/4922073.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .layout {
+            display: grid;
+            place-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding-inline: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 2rem;
+            height: 35rem;
+            max-width: 30rem;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .avatar-container {
+            display: flex;
+            margin-top: 2rem;
+        }
+
+        .avatar {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+            margin-right: 0.7rem;
+        }
+
+        .wrapper {
+            padding-inline: 2rem;
+        }
+
+        .description > * {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="layout">
+        <h1>From the blog</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ducimus decina ratione vitae, repellat cum culpa!</p>
+        <section class="card-container">
+            <article class="card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+                </figure>
+                <div class="wrapper">
+                    <div class="description">
+                        <a href="">Article</a>
+                        <h2>Boost your conversion rate</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ipsum. Pariatur potro, doloremque quae praesentium omnis adipisci.</p>
+                    </div>
+                    <figure class="avatar-container">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&w=1000&q=80" class="avatar" alt="">
+                        <div>
+                            <h3 class="author-name">Ulvi Tugay</h3>
+                            <span>Mar 16, 2023</span><span>6 min read</span>
+                        </div>
+                </figure>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+                </figure>
+                <div class="wrapper">
+                    <div class="description">
+                        <a href="">Article</a>
+                        <h2>Boost your conversion rate</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ipsum. Pariatur potro, doloremque quae praesentium omnis adipisci.</p>
+                    </div>
+                    <figure class="avatar-container">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" class="avatar" alt="">
+                        <div>
+                            <h3 class="author-name">Ulvi Tugay</h3>
+                            <span>Mar 16, 2023</span><span>6 min read</span>
+                        </div>
+                </figure>
+                </div>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+                </figure>
+                <div class="wrapper">
+                    <div class="description">
+                        <a href="">Article</a>
+                        <h2>Boost your conversion rate</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ipsum. Pariatur potro, doloremque quae praesentium omnis adipisci.</p>
+                    </div>
+                    <figure class="avatar-container">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80" class="avatar" alt="">
+                        <div>
+                            <h3 class="author-name">Ulvi Tugay</h3>
+                            <span>Mar 16, 2023</span><span>6 min read</span>
+                        </div>
+                </figure>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
